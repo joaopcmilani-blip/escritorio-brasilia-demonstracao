@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Escritório Brasília. Contabilidade geral, serviços para empresas e Imposto de Renda em Votuporanga e região.">
+<meta name="robots" content="noindex, nofollow">
+<title>Escritório Brasília | Contabilidade em Votuporanga</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<symbol id="calculator" viewBox="0 0 48 48"><rect x="10" y="4" width="28" height="40" rx="4"/><path d="M16 13h16M16 22h2m5 0h2m5 0h2M16 29h2m5 0h2m5 0h2M16 36h2m5 0h2m5 0h2"/></symbol>
+<symbol id="briefcase" viewBox="0 0 48 48"><rect x="3" y="13" width="42" height="30" rx="4"/><path d="M16 13V9a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4M3 25h42m-24 0v4h6v-4"/></symbol>
+<symbol id="tax" viewBox="0 0 48 48"><path d="M12 4h18l10 10v27a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3Z M30 4v11h10M18 35l13-13"/><circle cx="18" cy="23" r="2.5"/><circle cx="31" cy="35" r="2.5"/></symbol>
+<symbol id="phone" viewBox="0 0 24 24"><path d="M7 3H4a1 1 0 0 0-1 1c0 9 8 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a13 13 0 0 1-7-7l2-2Z"/></symbol>
+<symbol id="pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="chat" viewBox="0 0 24 24"><path d="M21 11.5a9 9 0 0 1-13 8l-5 1 1.2-4.5A9 9 0 1 1 21 11.5Z"/><path d="m9 7-1 1c-1 2 3 6 5 7 1 .5 2 0 3-1l-2-2-1 1c-1 0-3-2-3-3l1-1Z"/></symbol>
+</svg>
+<header id="inicio">
+  <div class="wrap header-inner">
+    <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"></span><span>Escritório<br>Brasília</span></a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <nav id="navigation" aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a></nav>
+  </div>
+</header>
+<main>
+  <section class="hero" aria-labelledby="headline">
+    <div class="hero-photo" role="img" aria-label="Mesa de escritório com calculadora, documentos e livros"></div>
+    <div class="wrap hero-content">
+      <h1 id="headline">56 anos de<br class="desktop"> tradição em<br class="desktop"> contabilidade</h1>
+      <p>Atendimento em Votuporanga e região</p>
+      <a class="button" href="https://wa.me/5517982170013"><svg aria-hidden="true"><use href="#chat"/></svg>Fale pelo WhatsApp</a>
+    </div>
+  </section>
+  <section id="servicos" class="services wrap" aria-label="Serviços">
+    <details><summary><svg aria-hidden="true"><use href="#calculator"/></svg><span>Contabilidade geral</span></summary><p>Converse com o escritório sobre a organização e o acompanhamento da contabilidade do seu negócio.</p></details>
+    <details><summary><svg aria-hidden="true"><use href="#briefcase"/></svg><span>Serviços para empresas</span></summary><p>Entre em contato para saber como o escritório pode ajudar com as rotinas e obrigações da sua empresa.</p></details>
+    <details><summary><svg aria-hidden="true"><use href="#tax"/></svg><span>Imposto de Renda</span></summary><p>Tire suas dúvidas sobre a declaração e consulte o escritório sobre os documentos necessários.</p></details>
+  </section>
+  <section id="contato" class="contact" aria-label="Contato">
+    <div class="wrap contact-inner">
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Amazonas%2C%203774%20%2C%20Votuporanga%2C%20SP"><svg aria-hidden="true"><use href="#pin"/></svg>Rua Amazonas, 3774 · Votuporanga</a>
+      <a href="tel:+5517982170013"><svg aria-hidden="true"><use href="#phone"/></svg>(17) 98217-0013</a>
+    </div>
+  </section>
+  <section id="sobre" class="about wrap">
+    <h2>Sobre o Escritório Brasília</h2>
+    <p>Há 56 anos na contabilidade, o Escritório Brasília atende Votuporanga e região. O escritório trabalha com contabilidade geral, serviços para empresas e Imposto de Renda.</p>
+  </section>
+</main>
+<footer class="wrap site-footer">Demonstração do site · Milani Soluções Digitais</footer>
+<script>
+const menu = document.querySelector('.menu');
+function setMenu(open) {
+  menu.setAttribute('aria-expanded', String(open));
+  menu.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+}
+menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') === 'false'));
+document.querySelectorAll('nav a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
+    setMenu(false);
+    menu.focus();
+  }
+});
+</script>
+</body>
+</html>
